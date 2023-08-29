@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-size: 16px;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+}
+
+
+div[data-nextjs-scroll-focus-boundary] {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 94% 1fr;
+  grid-template-rows: 96px auto 72px;
+}
+
+
+.container>* {
+  grid-column: 2;
+}
+
+.container>.fluid {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 640px) {
+
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 768px) {
+
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px) {
+
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 1280px) {
+
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 1536px) {
+
+  .container {
+    max-width: 100%;
+  }
+}
